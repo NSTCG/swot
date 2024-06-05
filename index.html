@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOT Analysis Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="swot-grid">
+        <h1>SWOT Analyses</h1>
+        <button onclick="createNewSwot()">Create New SWOT</button>
+        <div id="swotList"></div>
+    </div>
+
+    <div class="swot-editor" id="swotEditor">
+        <button onclick="closeEditor()">Back to List</button>
+        <input type="text" id="swotTitle" placeholder="Title" />
+        <textarea id="swotDescription" placeholder="Description of what we are SWOTting"></textarea>
+        <div class="swot-column">
+            <h3>Strengths</h3>
+            <textarea id="swotStrengths" placeholder="Press enter to add new content"></textarea>
+        </div>
+        <div class="swot-column">
+            <h3>Weaknesses</h3>
+            <textarea id="swotWeaknesses" placeholder="Press enter to add new content"></textarea>
+        </div>
+        <div class="swot-column">
+            <h3>Opportunities</h3>
+            <textarea id="swotOpportunities" placeholder="Press enter to add new content"></textarea>
+        </div>
+        <div class="swot-column">
+            <h3>Threats</h3>
+            <textarea id="swotThreats" placeholder="Press enter to add new content"></textarea>
+        </div>
+        <div id="swotId"></div> <!-- Added element with ID 'swotId' -->
+        <button id="saveButton">Save</button> <!-- Added save button -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

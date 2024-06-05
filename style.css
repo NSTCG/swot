@@ -1,0 +1,90 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.swot-grid,
+.swot-editor {
+	padding: 20px;
+}
+
+.swot-item {
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+}
+
+.swot-item h2 {
+	margin: 0;
+	font-size: 20px;
+	color: #333;
+}
+
+.swot-item p {
+	margin: 0;
+	color: #666;
+}
+
+.swot-editor {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.9);
+	z-index: 9999;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+.swot-editor-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.swot-column {
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.swot-column h3 {
+	margin: 0;
+	font-size: 18px;
+	color: #333;
+}
+
+.swot-column textarea {
+	width: calc(100% - 20px); /* Adjust for padding */
+	height: 100px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	resize: none;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+button:focus {
+	outline: none;
+}
