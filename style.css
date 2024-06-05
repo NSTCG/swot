@@ -31,27 +31,24 @@ body {
 .swot-editor {
 	display: none;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(255, 255, 255, 0.9);
-	z-index: 9999;
-	padding: 20px;
-	overflow-y: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 10px;
+	padding: 40px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.swot-editor-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
+.swot-editor h2,
+.swot-editor p {
+	margin: 0;
+	margin-bottom: 20px;
 }
 
 .swot-column {
-	background-color: #f9f9f9;
-	border-radius: 5px;
-	padding: 20px;
-	box-sizing: border-box;
+	margin-bottom: 20px;
+	position: relative; /* Added relative positioning */
 }
 
 .swot-column h3 {
@@ -61,7 +58,7 @@ body {
 }
 
 .swot-column textarea {
-	width: calc(100% - 20px); /* Adjust for padding */
+	width: calc(90%); /* Adjusted width to accommodate margin */
 	height: 100px;
 	padding: 10px;
 	border-radius: 5px;
@@ -69,6 +66,13 @@ body {
 	resize: none;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
+	margin: 10px; /* Added margin */
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.8
+	); /* Semi-transparent background */
 }
 
 button {
@@ -87,4 +91,44 @@ button:hover {
 
 button:focus {
 	outline: none;
+}
+
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Colors for SWOT sections */
+.swot-column:nth-child(odd) {
+	background-color: #bdecb6; /* Light green for odd numbered sections */
+}
+
+.swot-column:nth-child(even) {
+	background-color: #ffd9d9; /* Light red for even numbered sections */
 }

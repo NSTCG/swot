@@ -117,3 +117,20 @@ const debouncedSaveSwot = debounce(() => saveSwot());
 
 saveButton.addEventListener("click", saveSwot); // Add event listener to the save button
 document.addEventListener("DOMContentLoaded", loadSwots);
+
+// Get all elements with the "tooltip" class
+const tooltips = document.querySelectorAll(".tooltip");
+
+// Loop through each tooltip element
+tooltips.forEach((tooltip) => {
+	// Get the tooltip text from the "data-tooltip" attribute
+	const tooltipText = tooltip.getAttribute("data-tooltip");
+
+	// Create a tooltip element
+	const tooltipElement = document.createElement("span");
+	tooltipElement.classList.add("tooltiptext");
+	tooltipElement.textContent = tooltipText;
+
+	// Append the tooltip element to the tooltip container
+	tooltip.appendChild(tooltipElement);
+});

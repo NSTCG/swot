@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWOT Analysis Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,19 +22,23 @@
         <input type="text" id="swotTitle" placeholder="Title" />
         <textarea id="swotDescription" placeholder="Description of what we are SWOTting"></textarea>
         <div class="swot-column">
-            <h3>Strengths</h3>
+            <h3>Strengths <i class="fas fa-info-circle tooltip"
+                    data-tooltip="List the internal positive aspects of the current situation."></i></h3>
             <textarea id="swotStrengths" placeholder="Press enter to add new content"></textarea>
         </div>
         <div class="swot-column">
-            <h3>Weaknesses</h3>
+            <h3>Weaknesses <i class="fas fa-info-circle tooltip"
+                    data-tooltip="List the internal negative aspects of the current situation."></i></h3>
             <textarea id="swotWeaknesses" placeholder="Press enter to add new content"></textarea>
         </div>
         <div class="swot-column">
-            <h3>Opportunities</h3>
+            <h3>Opportunities <i class="fas fa-info-circle tooltip"
+                    data-tooltip="List the external positive aspects that could be beneficial."></i></h3>
             <textarea id="swotOpportunities" placeholder="Press enter to add new content"></textarea>
         </div>
         <div class="swot-column">
-            <h3>Threats</h3>
+            <h3>Threats <i class="fas fa-info-circle tooltip"
+                    data-tooltip="List the external negative aspects that could pose challenges."></i></h3>
             <textarea id="swotThreats" placeholder="Press enter to add new content"></textarea>
         </div>
         <div id="swotId"></div> <!-- Added element with ID 'swotId' -->
